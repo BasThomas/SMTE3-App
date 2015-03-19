@@ -128,7 +128,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	
 	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool
 	{
-		//self.filterContentForSearchText(searchString)
+		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+		let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
+		
+		self.filterContentForSearchText(searchString, scope: selectedScope)
 		
 		return true
 	}
@@ -140,18 +143,25 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		return true
 	}
 	
+	func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int)
+	{
+		let searchText = self.searchDisplayController!.searchBar.text
+		self.searchDisplayController(self.searchDisplayController!, shouldReloadTableForSearchString: searchText)
+	}
+	
 	/**
 		Filters the list of clients according to the query.
 		
 		:param: searchText The query.
 	*/
-	func filterContentForSearchText(searchText: String)
+	func filterContentForSearchText(searchText: String, scope: String)
 	{
-		/*self.filteredClients = self.clients.filter(
-			{
-				(client: Client) -> Bool in
-				
-				return client.name.lowercaseString.hasPrefix(searchText.lowercaseString)
+		println("searching for \"\(searchText)\" in scope \(scope)")
+		/*self.filtered = self.clients.filter(
+		{
+			(object: AnyObject) -> Bool in
+			
+			return client.name.lowercaseString.hasPrefix(searchText.lowercaseString)
 		})*/
 	}
 	
