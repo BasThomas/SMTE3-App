@@ -9,14 +9,21 @@
 import UIKit
 import MusiKit
 
-class SearchTableViewController: UITableViewController
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate
 {
 	var musicians: [Musician]?
 	var bands: [Band]?
 	
+	var filtered = [AnyObject]()
+	
     override func viewDidLoad()
 	{
         super.viewDidLoad()
+		
+		let refresh = UIRefreshControl()
+		refresh.addTarget(self, action: Selector("refresh"), forControlEvents: .ValueChanged)
+		
+		self.refreshControl = refresh
     }
 
     override func didReceiveMemoryWarning()
@@ -36,7 +43,14 @@ class SearchTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 	{
         // Return the number of rows in the section.
-        return 2
+		if tableView == self.searchDisplayController!.searchResultsTableView
+		{
+			return self.filtered.count
+		}
+		else
+		{
+			return 2
+		}
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -109,6 +123,45 @@ class SearchTableViewController: UITableViewController
         return true
     }
     */
+	
+	// MARK: - Searchbar data source
+	
+	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool
+	{
+		//self.filterContentForSearchText(searchString)
+		
+		return true
+	}
+	
+	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool
+	{
+		//self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+		
+		return true
+	}
+	
+	/**
+		Filters the list of clients according to the query.
+		
+		:param: searchText The query.
+	*/
+	func filterContentForSearchText(searchText: String)
+	{
+		/*self.filteredClients = self.clients.filter(
+			{
+				(client: Client) -> Bool in
+				
+				return client.name.lowercaseString.hasPrefix(searchText.lowercaseString)
+		})*/
+	}
+	
+	// MARK: - Refresh
+	
+	func refresh()
+	{
+		println("refreshing")
+		self.refreshControl?.endRefreshing()
+	}
 
     // MARK: - Navigation
 
