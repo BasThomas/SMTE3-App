@@ -15,4 +15,4 @@ In principe nog op schema. Nog niet echt interessante dingen gebeurd; die gaan v
 
 ## Week 4
 ### 19/03/2015
-Begin gemaakt aan een paar views in de applicatie. Zie ac45112e757a4d5bd3d74e63e25707f12f66ac0f.
+Begin gemaakt aan een paar views in de applicatie. Zie [ac45112](https://github.com/BasThomas/SMTE3-App/commit/ac45112e757a4d5bd3d74e63e25707f12f66ac0f).
