@@ -131,22 +131,18 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
 		let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
 		
-		self.filterContentForSearchText(searchString, scope: selectedScope)
+		self.filterContent(searchText: searchString, scope: selectedScope)
 		
 		return true
 	}
 	
 	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool
 	{
-		//self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+		
+		self.filterContent(searchText: self.searchDisplayController!.searchBar.text, scope: scopes[searchOption])
 		
 		return true
-	}
-	
-	func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int)
-	{
-		let searchText = self.searchDisplayController!.searchBar.text
-		self.searchDisplayController(self.searchDisplayController!, shouldReloadTableForSearchString: searchText)
 	}
 	
 	/**
@@ -154,14 +150,17 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		
 		:param: searchText The query.
 	*/
-	func filterContentForSearchText(searchText: String, scope: String)
+	func filterContent(#searchText: String, scope: String)
 	{
 		println("searching for \"\(searchText)\" in scope \(scope)")
 		/*self.filtered = self.clients.filter(
 		{
 			(object: AnyObject) -> Bool in
 			
-			return client.name.lowercaseString.hasPrefix(searchText.lowercaseString)
+			var categoryMatch = (scope == "All") || (candy.category == scope)
+			var stringMatch = candy.name.rangeOfString(searchText)
+			
+			return categoryMatch && (stringMatch != nil)
 		})*/
 	}
 	
