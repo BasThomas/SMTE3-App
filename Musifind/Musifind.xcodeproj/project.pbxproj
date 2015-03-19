@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		493FB0411ABADC64005357C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0401ABADC64005357C4 /* AppDelegate.swift */; };
+		493FB0481ABADC64005357C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493FB0461ABADC64005357C4 /* Main.storyboard */; };
+		493FB04A1ABADC64005357C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493FB0491ABADC64005357C4 /* Images.xcassets */; };
+		493FB04D1ABADC64005357C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493FB04B1ABADC64005357C4 /* LaunchScreen.xib */; };
+		493FB0591ABADC64005357C4 /* MusifindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0581ABADC64005357C4 /* MusifindTests.swift */; };
+		493FB0631ABAE09D005357C4 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0621ABAE09D005357C4 /* SearchTableViewController.swift */; };
+		493FB0651ABAE18F005357C4 /* MusicianTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0641ABAE18F005357C4 /* MusicianTableViewCell.swift */; };
+		493FB0671ABAE2DB005357C4 /* BandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0661ABAE2DB005357C4 /* BandTableViewCell.swift */; };
+		493FB0721ABAE4B3005357C4 /* MusiKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 493FB0711ABAE4B3005357C4 /* MusiKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		493FB0781ABAE4B3005357C4 /* MusiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FB06D1ABAE4B3005357C4 /* MusiKit.framework */; };
+		493FB0811ABAE4B3005357C4 /* MusiKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0801ABAE4B3005357C4 /* MusiKitTests.swift */; };
+		493FB0841ABAE4B3005357C4 /* MusiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493FB06D1ABAE4B3005357C4 /* MusiKit.framework */; };
+		493FB0851ABAE4B3005357C4 /* MusiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 493FB06D1ABAE4B3005357C4 /* MusiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		493FB08E1ABAE4C2005357C4 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB08D1ABAE4C2005357C4 /* Band.swift */; };
+		493FB0901ABAE4CF005357C4 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB08F1ABAE4CF005357C4 /* Musician.swift */; };
+		493FB0941ABAE626005357C4 /* MusicianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0931ABAE626005357C4 /* MusicianDetailViewController.swift */; };
+		493FB0961ABAE639005357C4 /* BandDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0951ABAE639005357C4 /* BandDetailViewController.swift */; };
+		493FB0981ABAE8A4005357C4 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0971ABAE8A4005357C4 /* Instrument.swift */; };
+		493FB09A1ABAF872005357C4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0991ABAF872005357C4 /* Genre.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		493FB0531ABADC64005357C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493FB03A1ABADC64005357C4;
+			remoteInfo = Musifind;
+		};
+		493FB0791ABAE4B3005357C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493FB06C1ABAE4B3005357C4;
+			remoteInfo = MusiKit;
+		};
+		493FB07B1ABAE4B3005357C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493FB03A1ABADC64005357C4;
+			remoteInfo = Musifind;
+		};
+		493FB0821ABAE4B3005357C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 493FB06C1ABAE4B3005357C4;
+			remoteInfo = MusiKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		493FB0891ABAE4B3005357C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				493FB0851ABAE4B3005357C4 /* MusiKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		493FB03B1ABADC64005357C4 /* Musifind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musifind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		493FB03F1ABADC64005357C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493FB0401ABADC64005357C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		493FB0471ABADC64005357C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		493FB0491ABADC64005357C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		493FB04C1ABADC64005357C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		493FB0521ABADC64005357C4 /* MusifindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusifindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		493FB0571ABADC64005357C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493FB0581ABADC64005357C4 /* MusifindTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusifindTests.swift; sourceTree = "<group>"; };
+		493FB0621ABAE09D005357C4 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		493FB0641ABAE18F005357C4 /* MusicianTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicianTableViewCell.swift; sourceTree = "<group>"; };
+		493FB0661ABAE2DB005357C4 /* BandTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandTableViewCell.swift; sourceTree = "<group>"; };
+		493FB06D1ABAE4B3005357C4 /* MusiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MusiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		493FB0701ABAE4B3005357C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493FB0711ABAE4B3005357C4 /* MusiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusiKit.h; sourceTree = "<group>"; };
+		493FB0771ABAE4B3005357C4 /* MusiKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusiKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		493FB07F1ABAE4B3005357C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		493FB0801ABAE4B3005357C4 /* MusiKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusiKitTests.swift; sourceTree = "<group>"; };
+		493FB08D1ABAE4C2005357C4 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		493FB08F1ABAE4CF005357C4 /* Musician.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
+		493FB0931ABAE626005357C4 /* MusicianDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicianDetailViewController.swift; sourceTree = "<group>"; };
+		493FB0951ABAE639005357C4 /* BandDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandDetailViewController.swift; sourceTree = "<group>"; };
+		493FB0971ABAE8A4005357C4 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		493FB0991ABAF872005357C4 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		493FB0381ABADC64005357C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0841ABAE4B3005357C4 /* MusiKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB04F1ABADC64005357C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB0691ABAE4B3005357C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB0741ABAE4B3005357C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0781ABAE4B3005357C4 /* MusiKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		493FB0321ABADC64005357C4 = {
+			isa = PBXGroup;
+			children = (
+				493FB03D1ABADC64005357C4 /* Musifind */,
+				493FB0551ABADC64005357C4 /* MusifindTests */,
+				493FB06E1ABAE4B3005357C4 /* MusiKit */,
+				493FB07D1ABAE4B3005357C4 /* MusiKitTests */,
+				493FB03C1ABADC64005357C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		493FB03C1ABADC64005357C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				493FB03B1ABADC64005357C4 /* Musifind.app */,
+				493FB0521ABADC64005357C4 /* MusifindTests.xctest */,
+				493FB06D1ABAE4B3005357C4 /* MusiKit.framework */,
+				493FB0771ABAE4B3005357C4 /* MusiKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		493FB03D1ABADC64005357C4 /* Musifind */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0921ABAE50B005357C4 /* Control */,
+				493FB0401ABADC64005357C4 /* AppDelegate.swift */,
+				493FB0461ABADC64005357C4 /* Main.storyboard */,
+				493FB0491ABADC64005357C4 /* Images.xcassets */,
+				493FB04B1ABADC64005357C4 /* LaunchScreen.xib */,
+				493FB03E1ABADC64005357C4 /* Supporting Files */,
+			);
+			path = Musifind;
+			sourceTree = "<group>";
+		};
+		493FB03E1ABADC64005357C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493FB03F1ABADC64005357C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		493FB0551ABADC64005357C4 /* MusifindTests */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0581ABADC64005357C4 /* MusifindTests.swift */,
+				493FB0561ABADC64005357C4 /* Supporting Files */,
+			);
+			path = MusifindTests;
+			sourceTree = "<group>";
+		};
+		493FB0561ABADC64005357C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0571ABADC64005357C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		493FB06E1ABAE4B3005357C4 /* MusiKit */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0711ABAE4B3005357C4 /* MusiKit.h */,
+				493FB0911ABAE4DC005357C4 /* Model */,
+				493FB06F1ABAE4B3005357C4 /* Supporting Files */,
+			);
+			path = MusiKit;
+			sourceTree = "<group>";
+		};
+		493FB06F1ABAE4B3005357C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0701ABAE4B3005357C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		493FB07D1ABAE4B3005357C4 /* MusiKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0801ABAE4B3005357C4 /* MusiKitTests.swift */,
+				493FB07E1ABAE4B3005357C4 /* Supporting Files */,
+			);
+			path = MusiKitTests;
+			sourceTree = "<group>";
+		};
+		493FB07E1ABAE4B3005357C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				493FB07F1ABAE4B3005357C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		493FB0911ABAE4DC005357C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				493FB08D1ABAE4C2005357C4 /* Band.swift */,
+				493FB08F1ABAE4CF005357C4 /* Musician.swift */,
+				493FB0971ABAE8A4005357C4 /* Instrument.swift */,
+				493FB0991ABAF872005357C4 /* Genre.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		493FB0921ABAE50B005357C4 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				493FB0621ABAE09D005357C4 /* SearchTableViewController.swift */,
+				493FB0641ABAE18F005357C4 /* MusicianTableViewCell.swift */,
+				493FB0661ABAE2DB005357C4 /* BandTableViewCell.swift */,
+				493FB0931ABAE626005357C4 /* MusicianDetailViewController.swift */,
+				493FB0951ABAE639005357C4 /* BandDetailViewController.swift */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		493FB06A1ABAE4B3005357C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0721ABAE4B3005357C4 /* MusiKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		493FB03A1ABADC64005357C4 /* Musifind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493FB05C1ABADC64005357C4 /* Build configuration list for PBXNativeTarget "Musifind" */;
+			buildPhases = (
+				493FB0371ABADC64005357C4 /* Sources */,
+				493FB0381ABADC64005357C4 /* Frameworks */,
+				493FB0391ABADC64005357C4 /* Resources */,
+				493FB0891ABAE4B3005357C4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				493FB0831ABAE4B3005357C4 /* PBXTargetDependency */,
+			);
+			name = Musifind;
+			productName = Musifind;
+			productReference = 493FB03B1ABADC64005357C4 /* Musifind.app */;
+			productType = "com.apple.product-type.application";
+		};
+		493FB0511ABADC64005357C4 /* MusifindTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493FB05F1ABADC64005357C4 /* Build configuration list for PBXNativeTarget "MusifindTests" */;
+			buildPhases = (
+				493FB04E1ABADC64005357C4 /* Sources */,
+				493FB04F1ABADC64005357C4 /* Frameworks */,
+				493FB0501ABADC64005357C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				493FB0541ABADC64005357C4 /* PBXTargetDependency */,
+			);
+			name = MusifindTests;
+			productName = MusifindTests;
+			productReference = 493FB0521ABADC64005357C4 /* MusifindTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		493FB06C1ABAE4B3005357C4 /* MusiKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493FB0861ABAE4B3005357C4 /* Build configuration list for PBXNativeTarget "MusiKit" */;
+			buildPhases = (
+				493FB0681ABAE4B3005357C4 /* Sources */,
+				493FB0691ABAE4B3005357C4 /* Frameworks */,
+				493FB06A1ABAE4B3005357C4 /* Headers */,
+				493FB06B1ABAE4B3005357C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusiKit;
+			productName = MusiKit;
+			productReference = 493FB06D1ABAE4B3005357C4 /* MusiKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		493FB0761ABAE4B3005357C4 /* MusiKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493FB08A1ABAE4B3005357C4 /* Build configuration list for PBXNativeTarget "MusiKitTests" */;
+			buildPhases = (
+				493FB0731ABAE4B3005357C4 /* Sources */,
+				493FB0741ABAE4B3005357C4 /* Frameworks */,
+				493FB0751ABAE4B3005357C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				493FB07A1ABAE4B3005357C4 /* PBXTargetDependency */,
+				493FB07C1ABAE4B3005357C4 /* PBXTargetDependency */,
+			);
+			name = MusiKitTests;
+			productName = MusiKitTests;
+			productReference = 493FB0771ABAE4B3005357C4 /* MusiKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		493FB0331ABADC64005357C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = Bas;
+				TargetAttributes = {
+					493FB03A1ABADC64005357C4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					493FB0511ABADC64005357C4 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 493FB03A1ABADC64005357C4;
+					};
+					493FB06C1ABAE4B3005357C4 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					493FB0761ABAE4B3005357C4 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 493FB03A1ABADC64005357C4;
+					};
+				};
+			};
+			buildConfigurationList = 493FB0361ABADC64005357C4 /* Build configuration list for PBXProject "Musifind" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 493FB0321ABADC64005357C4;
+			productRefGroup = 493FB03C1ABADC64005357C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				493FB03A1ABADC64005357C4 /* Musifind */,
+				493FB0511ABADC64005357C4 /* MusifindTests */,
+				493FB06C1ABAE4B3005357C4 /* MusiKit */,
+				493FB0761ABAE4B3005357C4 /* MusiKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		493FB0391ABADC64005357C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0481ABADC64005357C4 /* Main.storyboard in Resources */,
+				493FB04D1ABADC64005357C4 /* LaunchScreen.xib in Resources */,
+				493FB04A1ABADC64005357C4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB0501ABADC64005357C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB06B1ABAE4B3005357C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB0751ABAE4B3005357C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		493FB0371ABADC64005357C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0411ABADC64005357C4 /* AppDelegate.swift in Sources */,
+				493FB0941ABAE626005357C4 /* MusicianDetailViewController.swift in Sources */,
+				493FB0631ABAE09D005357C4 /* SearchTableViewController.swift in Sources */,
+				493FB0671ABAE2DB005357C4 /* BandTableViewCell.swift in Sources */,
+				493FB0961ABAE639005357C4 /* BandDetailViewController.swift in Sources */,
+				493FB0651ABAE18F005357C4 /* MusicianTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB04E1ABADC64005357C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0591ABADC64005357C4 /* MusifindTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB0681ABAE4B3005357C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0901ABAE4CF005357C4 /* Musician.swift in Sources */,
+				493FB0981ABAE8A4005357C4 /* Instrument.swift in Sources */,
+				493FB08E1ABAE4C2005357C4 /* Band.swift in Sources */,
+				493FB09A1ABAF872005357C4 /* Genre.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		493FB0731ABAE4B3005357C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				493FB0811ABAE4B3005357C4 /* MusiKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		493FB0541ABADC64005357C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 493FB03A1ABADC64005357C4 /* Musifind */;
+			targetProxy = 493FB0531ABADC64005357C4 /* PBXContainerItemProxy */;
+		};
+		493FB07A1ABAE4B3005357C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 493FB06C1ABAE4B3005357C4 /* MusiKit */;
+			targetProxy = 493FB0791ABAE4B3005357C4 /* PBXContainerItemProxy */;
+		};
+		493FB07C1ABAE4B3005357C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 493FB03A1ABADC64005357C4 /* Musifind */;
+			targetProxy = 493FB07B1ABAE4B3005357C4 /* PBXContainerItemProxy */;
+		};
+		493FB0831ABAE4B3005357C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 493FB06C1ABAE4B3005357C4 /* MusiKit */;
+			targetProxy = 493FB0821ABAE4B3005357C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		493FB0461ABADC64005357C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				493FB0471ABADC64005357C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		493FB04B1ABADC64005357C4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				493FB04C1ABADC64005357C4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		493FB05A1ABADC64005357C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		493FB05B1ABADC64005357C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		493FB05D1ABADC64005357C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Musifind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		493FB05E1ABADC64005357C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Musifind/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		493FB0601ABADC64005357C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusifindTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musifind.app/Musifind";
+			};
+			name = Debug;
+		};
+		493FB0611ABADC64005357C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusifindTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musifind.app/Musifind";
+			};
+			name = Release;
+		};
+		493FB0871ABAE4B3005357C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusiKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		493FB0881ABAE4B3005357C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MusiKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		493FB08B1ABAE4B3005357C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusiKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musifind.app/Musifind";
+			};
+			name = Debug;
+		};
+		493FB08C1ABAE4B3005357C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MusiKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Musifind.app/Musifind";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		493FB0361ABADC64005357C4 /* Build configuration list for PBXProject "Musifind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493FB05A1ABADC64005357C4 /* Debug */,
+				493FB05B1ABADC64005357C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		493FB05C1ABADC64005357C4 /* Build configuration list for PBXNativeTarget "Musifind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493FB05D1ABADC64005357C4 /* Debug */,
+				493FB05E1ABADC64005357C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		493FB05F1ABADC64005357C4 /* Build configuration list for PBXNativeTarget "MusifindTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493FB0601ABADC64005357C4 /* Debug */,
+				493FB0611ABADC64005357C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		493FB0861ABAE4B3005357C4 /* Build configuration list for PBXNativeTarget "MusiKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493FB0871ABAE4B3005357C4 /* Debug */,
+				493FB0881ABAE4B3005357C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		493FB08A1ABAE4B3005357C4 /* Build configuration list for PBXNativeTarget "MusiKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493FB08B1ABAE4B3005357C4 /* Debug */,
+				493FB08C1ABAE4B3005357C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 493FB0331ABADC64005357C4 /* Project object */;
+}
