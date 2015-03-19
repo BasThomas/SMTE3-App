@@ -124,6 +124,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     }
     */
 	
+	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+	{
+		tableView.deselectRowAtIndexPath(indexPath, animated: true)
+	}
+	
 	// MARK: - Searchbar data source
 	
 	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool
