@@ -26,6 +26,7 @@
 		493FB0961ABAE639005357C4 /* BandDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0951ABAE639005357C4 /* BandDetailViewController.swift */; };
 		493FB0981ABAE8A4005357C4 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0971ABAE8A4005357C4 /* Instrument.swift */; };
 		493FB09A1ABAF872005357C4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0991ABAF872005357C4 /* Genre.swift */; };
+		4995E3D81AC3FDF8005886F0 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3D71AC3FDF8005886F0 /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		493FB0951ABAE639005357C4 /* BandDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandDetailViewController.swift; sourceTree = "<group>"; };
 		493FB0971ABAE8A4005357C4 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		493FB0991ABAF872005357C4 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		4995E3D71AC3FDF8005886F0 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 		493FB0911ABAE4DC005357C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4995E3D71AC3FDF8005886F0 /* Artist.swift */,
 				493FB08D1ABAE4C2005357C4 /* Band.swift */,
 				493FB08F1ABAE4CF005357C4 /* Musician.swift */,
 				493FB0971ABAE8A4005357C4 /* Instrument.swift */,
@@ -449,6 +452,7 @@
 				493FB0901ABAE4CF005357C4 /* Musician.swift in Sources */,
 				493FB0981ABAE8A4005357C4 /* Instrument.swift in Sources */,
 				493FB08E1ABAE4C2005357C4 /* Band.swift in Sources */,
+				4995E3D81AC3FDF8005886F0 /* Artist.swift in Sources */,
 				493FB09A1ABAF872005357C4 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +737,7 @@
 				493FB05E1ABADC64005357C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493FB05F1ABADC64005357C4 /* Build configuration list for PBXNativeTarget "MusifindTests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +746,7 @@
 				493FB0611ABADC64005357C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493FB0861ABAE4B3005357C4 /* Build configuration list for PBXNativeTarget "MusiKit" */ = {
 			isa = XCConfigurationList;
@@ -749,6 +755,7 @@
 				493FB0881ABAE4B3005357C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493FB08A1ABAE4B3005357C4 /* Build configuration list for PBXNativeTarget "MusiKitTests" */ = {
 			isa = XCConfigurationList;
@@ -757,6 +764,7 @@
 				493FB08C1ABAE4B3005357C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

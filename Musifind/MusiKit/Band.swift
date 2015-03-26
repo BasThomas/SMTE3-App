@@ -8,15 +8,14 @@
 
 import UIKit
 
-public class Band
+public class Band: Artist
 {
-	public var name: String
 	public var musicians = [Musician]()
 	public var avatar: UIImage?
 	
 	public init(_ name: String)
 	{
-		self.name = name
+		super.init(name: name)
 	}
 	
 	public func addMusician(musician: Musician)

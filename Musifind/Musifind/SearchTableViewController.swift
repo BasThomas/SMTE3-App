@@ -11,10 +11,28 @@ import MusiKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate
 {
-	var musicians: [Musician]?
-	var bands: [Band]?
+	var musicians = [Musician]()
+	var bands = [Band]()
 	
-	var filtered = [AnyObject]()
+	var all = [Artist]()
+	var filtered = [Artist]()
+	
+	required init(coder aDecoder: NSCoder)
+	{
+		super.init(coder: aDecoder)
+		
+		let newBand = Band("The Bandname")
+		self.bands.append(newBand)
+		self.all.append(newBand)
+		
+		let musician = Musician("Bas Thomas Broek", instruments: .Drums, .Guitar)
+		self.musicians.append(musician)
+		self.all.append(musician)
+		
+		let anotherMusician = Musician("Toost van Bergen")
+		self.musicians.append(anotherMusician)
+		self.all.append(anotherMusician)
+	}
 	
     override func viewDidLoad()
 	{
@@ -49,7 +67,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		}
 		else
 		{
-			return 2
+			return self.all.count
 		}
     }
 
@@ -58,28 +76,42 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		var musicianCell: MusicianTableViewCell
 		var bandCell: BandTableViewCell
 		
-		if indexPath.row > 0
+		var currentMusician: Musician?
+		var currentBand: Band?
+		
+		if tableView == self.searchDisplayController!.searchResultsTableView
 		{
-			bandCell = tableView.dequeueReusableCellWithIdentifier("band", forIndexPath: indexPath) as BandTableViewCell
-			
-			let band = Band("The Bandname")
-			bandCell.band = band
-			
-			bandCell.nameLabel.text = bandCell.band?.name
-			
-			return bandCell
+			currentMusician = self.filtered[indexPath.row] as? Musician
+			currentBand = self.filtered[indexPath.row] as? Band
 		}
 		else
 		{
-			musicianCell = tableView.dequeueReusableCellWithIdentifier("musician", forIndexPath: indexPath) as MusicianTableViewCell
+			currentMusician = self.all[indexPath.row] as? Musician
+			currentBand = self.all[indexPath.row] as? Band
+		}
+		
+		if let musician = currentMusician
+		{
+			musicianCell = self.tableView.dequeueReusableCellWithIdentifier("musician", forIndexPath: indexPath) as MusicianTableViewCell
 			
-			let musician = Musician("Bas Thomas Broek", instruments: .Drums, .Guitar)
 			musicianCell.musician = musician
 			
 			musicianCell.nameLabel.text = musicianCell.musician?.name
 			
 			return musicianCell
 		}
+		else if let band = currentBand
+		{
+			bandCell = self.tableView.dequeueReusableCellWithIdentifier("band", forIndexPath: indexPath) as BandTableViewCell
+			
+			bandCell.band = band
+			
+			bandCell.nameLabel.text = bandCell.band?.name
+			
+			return bandCell
+		}
+		
+		return UITableViewCell()
     }
 
     /*
@@ -157,16 +189,26 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	*/
 	func filterContent(#searchText: String, scope: String)
 	{
-		println("searching for \"\(searchText)\" in scope \(scope)")
-		/*self.filtered = self.clients.filter(
+		self.filtered = self.all.filter(
 		{
-			(object: AnyObject) -> Bool in
+			(artist: Artist) -> Bool in
 			
-			var categoryMatch = (scope == "All") || (candy.category == scope)
-			var stringMatch = candy.name.rangeOfString(searchText)
+			var categoryMatch = false
 			
-			return categoryMatch && (stringMatch != nil)
-		})*/
+			switch(scope)
+			{
+				case "Bands":
+					categoryMatch = ((artist as? Band) != nil)
+				case "Musicians":
+					categoryMatch = ((artist as? Musician) != nil)
+				default:
+					categoryMatch = true
+				
+			}
+			var stringMatch = artist.name.lowercaseString.hasPrefix(searchText.lowercaseString)
+			
+			return categoryMatch && stringMatch
+		})
 	}
 	
 	// MARK: - Refresh

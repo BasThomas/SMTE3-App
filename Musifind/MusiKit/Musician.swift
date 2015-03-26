@@ -8,16 +8,14 @@
 
 import UIKit
 
-public class Musician
+public class Musician: Artist
 {
-	public var name: String
-	
 	public var instruments = [Instrument.None]
 	public var avatar: UIImage?
 	
 	public init(_ name: String)
 	{
-		self.name = name
+		super.init(name: name)
 	}
 	
 	public convenience init(_ name: String, instruments: Instrument...)
