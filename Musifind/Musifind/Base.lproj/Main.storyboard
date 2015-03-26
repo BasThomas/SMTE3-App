@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Musifind View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MusifindViewController" customModule="Musifind" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Search-->
+        <!--Explore-->
         <scene sceneID="cQ5-U1-jNE">
             <objects>
                 <tableViewController id="a6I-DZ-wKI" customClass="SearchTableViewController" customModule="Musifind" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,7 +136,7 @@
                             <outlet property="delegate" destination="a6I-DZ-wKI" id="45O-em-Fog"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="Naa-28-l7k"/>
+                    <navigationItem key="navigationItem" title="Explore" id="Naa-28-l7k"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="LvM-je-1Yq" id="2nJ-7d-QJY"/>
                     </connections>
@@ -254,14 +254,15 @@
             </objects>
             <point key="canvasLocation" x="2291" y="-795"/>
         </scene>
-        <!--Search-->
+        <!--Explore-->
         <scene sceneID="UqT-XM-eiN">
             <objects>
                 <navigationController id="mBl-lV-X2v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="search" id="Lql-u1-rlC"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cwN-Li-sHP">
+                    <tabBarItem key="tabBarItem" title="Explore" image="search" id="Lql-u1-rlC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="cwN-Li-sHP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.39215686274509803" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="a6I-DZ-wKI" kind="relationship" relationship="rootViewController" id="Vqi-VY-PP6"/>
@@ -271,7 +272,7 @@
             </objects>
             <point key="canvasLocation" x="748" y="-433"/>
         </scene>
-        <!--Account-->
+        <!--Profile-->
         <scene sceneID="pmc-j8-7vp">
             <objects>
                 <tableViewController id="6tx-aa-aTP" sceneMemberID="viewController">
@@ -292,20 +293,21 @@
                             <outlet property="delegate" destination="6tx-aa-aTP" id="1Va-XA-8RF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Account" id="GW0-0O-mqe"/>
+                    <navigationItem key="navigationItem" title="Profile" id="GW0-0O-mqe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAk-mL-KWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1568" y="568"/>
         </scene>
-        <!--Account-->
+        <!--Profile-->
         <scene sceneID="gjG-Ik-Y0r">
             <objects>
                 <navigationController id="x3S-45-Eu8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="user" id="H6m-nv-d6G"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U5L-LX-Yd7">
+                    <tabBarItem key="tabBarItem" title="Profile" image="user" id="H6m-nv-d6G"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="U5L-LX-Yd7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.3921568627" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="6tx-aa-aTP" kind="relationship" relationship="rootViewController" id="urd-kg-1sf"/>

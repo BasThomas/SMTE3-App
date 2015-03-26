@@ -19,6 +19,8 @@ class BandDetailViewController: UIViewController
 
         // Do any additional setup after loading the view.
 		
+		self.navigationController?.navigationBar.tintColor = .whiteColor()
+		
 		if let band = self.band
 		{
 			self.navigationItem.title = band.name

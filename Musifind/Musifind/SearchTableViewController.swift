@@ -11,10 +11,7 @@ import MusiKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate
 {
-	var musicians = [Musician]()
-	var bands = [Band]()
-	
-	var all = [Artist]()
+	var artists = [Artist]()
 	var filtered = [Artist]()
 	
 	required init(coder aDecoder: NSCoder)
@@ -22,16 +19,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		super.init(coder: aDecoder)
 		
 		let newBand = Band("The Bandname")
-		self.bands.append(newBand)
-		self.all.append(newBand)
+		self.artists.append(newBand)
 		
 		let musician = Musician("Bas Thomas Broek", instruments: .Drums, .Guitar)
-		self.musicians.append(musician)
-		self.all.append(musician)
+		self.artists.append(musician)
 		
 		let anotherMusician = Musician("Toost van Bergen")
-		self.musicians.append(anotherMusician)
-		self.all.append(anotherMusician)
+		self.artists.append(anotherMusician)
 	}
 	
     override func viewDidLoad()
@@ -67,7 +61,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		}
 		else
 		{
-			return self.all.count
+			return self.artists.count
 		}
     }
 
@@ -86,8 +80,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		}
 		else
 		{
-			currentMusician = self.all[indexPath.row] as? Musician
-			currentBand = self.all[indexPath.row] as? Band
+			currentMusician = self.artists[indexPath.row] as? Musician
+			currentBand = self.artists[indexPath.row] as? Band
 		}
 		
 		if let musician = currentMusician
@@ -189,7 +183,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	*/
 	func filterContent(#searchText: String, scope: String)
 	{
-		self.filtered = self.all.filter(
+		self.filtered = self.artists.filter(
 		{
 			(artist: Artist) -> Bool in
 			

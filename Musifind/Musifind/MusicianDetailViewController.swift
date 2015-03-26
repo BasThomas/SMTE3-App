@@ -22,6 +22,8 @@ class MusicianDetailViewController: UIViewController
 
         // Do any additional setup after loading the view.
 		
+		self.navigationController?.navigationBar.tintColor = .whiteColor()
+		
 		if let musician = self.musician
 		{
 			self.navigationItem.title = musician.name

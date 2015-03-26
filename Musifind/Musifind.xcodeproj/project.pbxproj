@@ -27,6 +27,8 @@
 		493FB0981ABAE8A4005357C4 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0971ABAE8A4005357C4 /* Instrument.swift */; };
 		493FB09A1ABAF872005357C4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0991ABAF872005357C4 /* Genre.swift */; };
 		4995E3D81AC3FDF8005886F0 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3D71AC3FDF8005886F0 /* Artist.swift */; };
+		4995E3DA1AC40DB0005886F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3D91AC40DB0005886F0 /* Extensions.swift */; };
+		4995E3DC1AC41D9C005886F0 /* MusifindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3DB1AC41D9C005886F0 /* MusifindViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		493FB0971ABAE8A4005357C4 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		493FB0991ABAF872005357C4 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		4995E3D71AC3FDF8005886F0 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		4995E3D91AC40DB0005886F0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4995E3DB1AC41D9C005886F0 /* MusifindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusifindViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 				493FB08F1ABAE4CF005357C4 /* Musician.swift */,
 				493FB0971ABAE8A4005357C4 /* Instrument.swift */,
 				493FB0991ABAF872005357C4 /* Genre.swift */,
+				4995E3D91AC40DB0005886F0 /* Extensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				493FB0661ABAE2DB005357C4 /* BandTableViewCell.swift */,
 				493FB0931ABAE626005357C4 /* MusicianDetailViewController.swift */,
 				493FB0951ABAE639005357C4 /* BandDetailViewController.swift */,
+				4995E3DB1AC41D9C005886F0 /* MusifindViewController.swift */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 				493FB0411ABADC64005357C4 /* AppDelegate.swift in Sources */,
 				493FB0941ABAE626005357C4 /* MusicianDetailViewController.swift in Sources */,
 				493FB0631ABAE09D005357C4 /* SearchTableViewController.swift in Sources */,
+				4995E3DC1AC41D9C005886F0 /* MusifindViewController.swift in Sources */,
 				493FB0671ABAE2DB005357C4 /* BandTableViewCell.swift in Sources */,
 				493FB0961ABAE639005357C4 /* BandDetailViewController.swift in Sources */,
 				493FB0651ABAE18F005357C4 /* MusicianTableViewCell.swift in Sources */,
@@ -450,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				493FB0901ABAE4CF005357C4 /* Musician.swift in Sources */,
+				4995E3DA1AC40DB0005886F0 /* Extensions.swift in Sources */,
 				493FB0981ABAE8A4005357C4 /* Instrument.swift in Sources */,
 				493FB08E1ABAE4C2005357C4 /* Band.swift in Sources */,
 				4995E3D81AC3FDF8005886F0 /* Artist.swift in Sources */,
