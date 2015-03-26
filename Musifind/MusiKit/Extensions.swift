@@ -66,8 +66,18 @@ extension UIColor
 		
 		:returns: The UIColor object.
 	*/
-	public class func musiFindColor() -> UIColor
+	public class func musifindColor() -> UIColor
 	{
 		return UIColor(red: 1, green: 0.392, blue: 0.161, alpha: 1)
+	}
+	
+	/**
+		Returns a color object whose RGB values are 0.788, 0.788, and 0.808 and whose alpha value is 1.0.
+		
+		:returns: The UIColor object.
+	*/
+	public class func searchBarColor() -> UIColor
+	{
+		return UIColor(red: 0.788, green: 0.788, blue: 0.808, alpha: 1)
 	}
 }

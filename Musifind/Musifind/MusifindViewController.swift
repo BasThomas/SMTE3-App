@@ -16,7 +16,7 @@ class MusifindViewController: UITabBarController
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		UITabBar.appearance().selectedImageTintColor = UIColor.musiFindColor()
+		UITabBar.appearance().selectedImageTintColor = UIColor.musifindColor()
     }
 
     override func didReceiveMemoryWarning()

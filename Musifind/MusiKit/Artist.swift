@@ -11,6 +11,7 @@ import UIKit
 public class Artist
 {
 	public var name: String
+	public var avatar: UIImage?
 	
 	public init(name: String)
 	{

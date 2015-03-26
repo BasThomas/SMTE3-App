@@ -36,6 +36,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		refresh.addTarget(self, action: Selector("refresh"), forControlEvents: .ValueChanged)
 		
 		self.refreshControl = refresh
+		self.searchDisplayController!.searchBar.tintColor = .musifindColor()
+		
+		// Fix the hairline.
+		self.searchDisplayController!.searchBar.layer.borderColor = UIColor.searchBarColor().CGColor
+		self.searchDisplayController!.searchBar.layer.borderWidth = 1
     }
 
     override func didReceiveMemoryWarning()

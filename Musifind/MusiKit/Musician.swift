@@ -11,7 +11,6 @@ import UIKit
 public class Musician: Artist
 {
 	public var instruments = [Instrument.None]
-	public var avatar: UIImage?
 	
 	public init(_ name: String)
 	{
