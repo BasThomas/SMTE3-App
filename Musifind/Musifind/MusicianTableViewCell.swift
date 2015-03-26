@@ -13,7 +13,7 @@ class MusicianTableViewCell: UITableViewCell
 {
 	var musician: Musician?
 	
-	@IBOutlet weak var userImage: UIImageView!
+	@IBOutlet weak var avatarImage: UIImageView!
 	@IBOutlet weak var instrumentImage: UIImageView!
 	@IBOutlet weak var nameLabel: UILabel!
 	
@@ -29,4 +29,11 @@ class MusicianTableViewCell: UITableViewCell
 
         // Configure the view for the selected state
     }
+	
+	func cornerImage()
+	{
+		self.avatarImage.layer.cornerRadius = (self.avatarImage.frame.size.height / 2)
+		self.avatarImage.layer.masksToBounds = true
+		self.avatarImage.layer.borderWidth = 0
+	}
 }

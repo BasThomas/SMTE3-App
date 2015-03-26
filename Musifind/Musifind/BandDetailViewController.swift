@@ -11,6 +11,8 @@ import MusiKit
 
 class BandDetailViewController: UIViewController
 {
+	@IBOutlet weak var avatarImage: UIImageView!
+	
 	var band: Band?
 	
     override func viewDidLoad()
@@ -24,6 +26,11 @@ class BandDetailViewController: UIViewController
 		if let band = self.band
 		{
 			self.navigationItem.title = band.name
+
+			if let avatar = band.avatar
+			{
+				self.avatarImage.image = avatar
+			}
 		}
 		else
 		{

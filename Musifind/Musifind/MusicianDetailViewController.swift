@@ -15,8 +15,9 @@ class MusicianDetailViewController: UIViewController
 	
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var instrumentsLabel: UILabel!
-	
-    override func viewDidLoad()
+	@IBOutlet weak var avatarImage: UIImageView!
+
+	override func viewDidLoad()
 	{
         super.viewDidLoad()
 
@@ -38,6 +39,11 @@ class MusicianDetailViewController: UIViewController
 			}
 			
 			self.instrumentsLabel.text = ", ".join(stringStruments)
+			
+			if let avatar = musician.avatar
+			{
+				self.avatarImage.image = avatar
+			}
 		}
 		else
 		{

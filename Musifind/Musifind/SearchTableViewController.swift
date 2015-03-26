@@ -19,12 +19,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		super.init(coder: aDecoder)
 		
 		let newBand = Band("The Bandname")
+		newBand.addAvatar("http://userserve-ak.last.fm/serve/_/87413387/Name+The+Band+mystique.jpg")
 		self.artists.append(newBand)
 		
 		let musician = Musician("Bas Thomas Broek", instruments: .Drums, .Guitar)
+		musician.addAvatar("https://pbs.twimg.com/profile_images/565978319137800193/5IwM8U7o.jpeg")
 		self.artists.append(musician)
 		
 		let anotherMusician = Musician("Toost van Bergen")
+		anotherMusician.addAvatar("https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10639714_961155063901928_5582667649241911522_n.jpg?oh=ab37efc9c9fcfc473d85d54e820aeda6&oe=55AD8954&__gda__=1438399973_6d6526d165f772876a4bcf65b57a85b7")
 		self.artists.append(anotherMusician)
 	}
 	
@@ -42,6 +45,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		self.searchDisplayController!.searchBar.layer.borderColor = UIColor.searchBarColor().CGColor
 		self.searchDisplayController!.searchBar.layer.borderWidth = 1
     }
+	
+	override func viewWillAppear(animated: Bool)
+	{
+		super.viewWillAppear(animated)
+		
+		tableView.reloadData()
+	}
 
     override func didReceiveMemoryWarning()
 	{
@@ -97,6 +107,12 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 			
 			musicianCell.nameLabel.text = musicianCell.musician?.name
 			
+			if let avatar = musicianCell.musician?.avatar
+			{
+				musicianCell.cornerImage()
+				musicianCell.avatarImage.image = avatar
+			}
+			
 			return musicianCell
 		}
 		else if let band = currentBand
@@ -106,6 +122,12 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 			bandCell.band = band
 			
 			bandCell.nameLabel.text = bandCell.band?.name
+			
+			if let avatar = bandCell.band?.avatar
+			{
+				bandCell.cornerImage()
+				bandCell.avatarImage.image = avatar
+			}
 			
 			return bandCell
 		}
@@ -186,7 +208,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		
 		:param: searchText The query.
 	*/
-	func filterContent(#searchText: String, scope: String)
+	private func filterContent(#searchText: String, scope: String)
 	{
 		self.filtered = self.artists.filter(
 		{
@@ -204,6 +226,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 					categoryMatch = true
 				
 			}
+			
 			var stringMatch = artist.name.lowercaseString.hasPrefix(searchText.lowercaseString)
 			
 			return categoryMatch && stringMatch
@@ -214,7 +237,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	
 	func refresh()
 	{
-		println("refreshing")
+		tableView.reloadData()
 		self.refreshControl?.endRefreshing()
 	}
 
