@@ -85,7 +85,6 @@
                                     <outlet property="avatarImage" destination="t24-mP-fGi" id="dRU-l2-LGX"/>
                                     <outlet property="instrumentImage" destination="Kim-OD-1nE" id="Hh3-y5-WIx"/>
                                     <outlet property="nameLabel" destination="2Lc-Ue-li4" id="Ybi-N5-JkD"/>
-                                    <segue destination="iEb-5f-Aks" kind="show" identifier="musicianDetail" id="8e4-MD-V6U"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="band" id="tR9-cD-0vt" customClass="BandTableViewCell" customModule="Musifind" customModuleProvider="target">
@@ -127,7 +126,6 @@
                                     <outlet property="avatarImage" destination="Oyh-jO-Y4e" id="ZiN-wJ-YPd"/>
                                     <outlet property="instrumentImage" destination="ZwL-7T-7Ah" id="q0x-zl-dQU"/>
                                     <outlet property="nameLabel" destination="DNp-Xh-C2n" id="la6-WE-IwT"/>
-                                    <segue destination="iyW-kr-oJ5" kind="show" identifier="bandDetail" id="iNo-tB-c1s"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="newBand" id="eiu-fL-fmb" customClass="BandTableViewCell" customModule="Musifind" customModuleProvider="target">
@@ -281,7 +279,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phBand" translatesAutoresizingMaskIntoConstraints="NO" id="foh-zh-Jvl">
-                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <rect key="frame" x="-4" y="64" width="608" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="C11-II-HmY"/>
                                 </constraints>
@@ -289,9 +287,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="foh-zh-Jvl" firstAttribute="leading" secondItem="Hex-X3-LTj" secondAttribute="leadingMargin" constant="-16" id="0Un-uN-xOg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="foh-zh-Jvl" secondAttribute="trailing" constant="-20" id="0Ly-Dx-I6L"/>
                             <constraint firstItem="foh-zh-Jvl" firstAttribute="top" secondItem="8WB-kS-q7I" secondAttribute="bottom" id="HFG-y3-1n1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="foh-zh-Jvl" secondAttribute="trailing" constant="-16" id="dPF-u2-uPt"/>
+                            <constraint firstItem="foh-zh-Jvl" firstAttribute="leading" secondItem="Hex-X3-LTj" secondAttribute="leadingMargin" constant="-20" id="t2m-yD-iN6"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -323,7 +321,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phMusician" translatesAutoresizingMaskIntoConstraints="NO" id="SZW-i2-weS">
-                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <rect key="frame" x="-4" y="64" width="608" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="7wV-E4-vvS"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="fsT-BZ-Mf2"/>
@@ -342,7 +340,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="instruments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWv-aj-UqM">
-                                <rect key="frame" x="119" y="300" width="90" height="21"/>
+                                <rect key="frame" x="119" y="300" width="90" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -358,15 +356,15 @@
                         <constraints>
                             <constraint firstItem="cWv-aj-UqM" firstAttribute="leading" secondItem="lrt-0X-FzT" secondAttribute="trailing" constant="8" id="44y-8f-b28"/>
                             <constraint firstItem="lrt-0X-FzT" firstAttribute="top" secondItem="FPf-ow-vBq" secondAttribute="bottom" constant="8" id="4X8-Dq-iJT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SZW-i2-weS" secondAttribute="trailing" constant="-20" id="69y-Ax-BAA"/>
                             <constraint firstItem="lrt-0X-FzT" firstAttribute="leading" secondItem="b8G-ek-ogE" secondAttribute="leadingMargin" id="6ea-2r-sZ5"/>
                             <constraint firstItem="FPf-ow-vBq" firstAttribute="top" secondItem="SZW-i2-weS" secondAttribute="bottom" constant="8" id="85D-Uf-gF6"/>
                             <constraint firstItem="SZW-i2-weS" firstAttribute="top" secondItem="Osu-TP-Uyg" secondAttribute="bottom" id="B5I-V9-pKe"/>
                             <constraint firstItem="Nh1-3g-B2v" firstAttribute="leading" secondItem="FPf-ow-vBq" secondAttribute="trailing" constant="8" id="FRz-wM-MzK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SZW-i2-weS" secondAttribute="trailing" constant="-16" id="KlX-am-g1Z"/>
                             <constraint firstItem="FPf-ow-vBq" firstAttribute="width" secondItem="lrt-0X-FzT" secondAttribute="width" id="MTY-hu-gKC"/>
                             <constraint firstItem="Nh1-3g-B2v" firstAttribute="top" secondItem="SZW-i2-weS" secondAttribute="bottom" constant="8" id="OiB-g3-L59"/>
                             <constraint firstItem="cWv-aj-UqM" firstAttribute="top" secondItem="Nh1-3g-B2v" secondAttribute="bottom" constant="8" id="TKn-8p-8fZ"/>
-                            <constraint firstItem="SZW-i2-weS" firstAttribute="leading" secondItem="b8G-ek-ogE" secondAttribute="leadingMargin" constant="-16" id="fhb-vD-dGI"/>
+                            <constraint firstItem="SZW-i2-weS" firstAttribute="leading" secondItem="b8G-ek-ogE" secondAttribute="leadingMargin" constant="-20" id="edI-9N-Mfk"/>
                             <constraint firstItem="FPf-ow-vBq" firstAttribute="leading" secondItem="b8G-ek-ogE" secondAttribute="leadingMargin" id="ijY-dg-cYs"/>
                         </constraints>
                     </view>
@@ -462,8 +460,4 @@
         <image name="search" width="30" height="30"/>
         <image name="user" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="0jv-mV-Ief"/>
-        <segue reference="sdt-yj-UgA"/>
-    </inferredMetricsTieBreakers>
 </document>
