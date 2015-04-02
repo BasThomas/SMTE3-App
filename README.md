@@ -22,3 +22,8 @@ Feedback gekregen op ons concept:
 Design: Algemeen, spreekt misschien niet elke eventuele gebruiker pakkend aan.
 
 Doel: Wat is het doel van de app? Muzikanten met elkaar in contact laten komen of mensen een nieuwe muziekstijl laten te ontwikkelen door een soort van ‘random’ knop? Het doel en het probleem wat beter formuleren.
+
+## Week 6
+Feedback van John: gebruikersonderzoek kan goed helpen om details voor de app te bepalen.
+
+Zelf: Documentatie duidelijk gaan opstellen. Nu is het wat onoverzichtelijk. We hebben daar later ook zelf veel aan wanneer het goed gedocumenteerd is.
