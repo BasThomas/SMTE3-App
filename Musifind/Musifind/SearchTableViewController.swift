@@ -118,7 +118,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		
 		if let musician = currentMusician
 		{
-			musicianCell = self.tableView.dequeueReusableCellWithIdentifier("musician", forIndexPath: indexPath) as MusicianTableViewCell
+			musicianCell = self.tableView.dequeueReusableCellWithIdentifier("newMusician", forIndexPath: indexPath) as MusicianTableViewCell
 			
 			musicianCell.musician = musician
 			
@@ -133,14 +133,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 			if musicianCell.musician!.hasInstrument()
 			{
 				let firstInstrument = musicianCell.musician?.instruments.first
-				musicianCell.instrumentImage.image = UIImage(named: firstInstrument!.rawValue)
+				//musicianCell.instrumentImage.image = UIImage(named: firstInstrument!.rawValue)
 			}
 			
 			return musicianCell
 		}
 		else if let band = currentBand
 		{
-			bandCell = self.tableView.dequeueReusableCellWithIdentifier("band", forIndexPath: indexPath) as BandTableViewCell
+			bandCell = self.tableView.dequeueReusableCellWithIdentifier("newBand", forIndexPath: indexPath) as BandTableViewCell
 			
 			bandCell.band = band
 			
