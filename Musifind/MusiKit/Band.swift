@@ -12,9 +12,9 @@ public class Band: Artist
 {
 	public var musicians = [Musician]()
 	
-	public init(_ name: String)
+	public init(_ name: String, image: String? = nil)
 	{
-		super.init(name: name)
+		super.init(name: name, image: image)
 	}
 	
 	public func addMusician(musician: Musician)

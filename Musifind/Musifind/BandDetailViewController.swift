@@ -12,6 +12,7 @@ import MusiKit
 class BandDetailViewController: UIViewController
 {
 	@IBOutlet weak var avatarImage: UIImageView!
+	@IBOutlet weak var addItem: UIBarButtonItem!
 	
 	var band: Band?
 	
@@ -22,6 +23,7 @@ class BandDetailViewController: UIViewController
         // Do any additional setup after loading the view.
 		
 		self.navigationController?.navigationBar.tintColor = .whiteColor()
+		self.avatarImage.layer.masksToBounds = true
 		
 		if let band = self.band
 		{
@@ -35,6 +37,12 @@ class BandDetailViewController: UIViewController
 		else
 		{
 			self.navigationItem.title = "Unknown"
+		}
+		
+		if let font = UIFont(name: "FontAwesome", size: 20)
+		{
+			self.addItem.setTitleTextAttributes([NSFontAttributeName: font], forState: .Normal)
+			self.addItem.title = "\u{f067}"
 		}
     }
 

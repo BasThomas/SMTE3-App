@@ -8,14 +8,31 @@
 
 import UIKit
 
+public protocol ImageDelegate
+{
+	func refresh(image: UIImage)
+}
+
 public class Artist
 {
 	public var name: String
 	public var avatar: UIImage?
+	{
+		didSet
+		{
+			self.delegate?.refresh(self.avatar!)
+		}
+	}
+	public var delegate: ImageDelegate?
 	
-	public init(name: String)
+	public init(name: String, image: String? = nil)
 	{
 		self.name = name
+		
+		if let image = image
+		{
+			self.addAvatar(image)
+		}
 	}
 	
 	public func addAvatar(avatar: String)

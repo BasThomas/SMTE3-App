@@ -12,21 +12,21 @@ public class Musician: Artist
 {
 	public var instruments = [Instrument.None]
 	
-	public init(_ name: String)
+	public init(_ name: String, image: String? = nil)
 	{
-		super.init(name: name)
+		super.init(name: name, image: image)
 	}
 	
-	public convenience init(_ name: String, instruments: Instrument...)
+	public convenience init(_ name: String, image: String? = nil, instruments: Instrument...)
 	{
-		self.init(name)
+		self.init(name, image: image)
 		
 		self.instruments = instruments
 	}
 	
-	public convenience init(_ name: String, instrument: Instrument)
+	public convenience init(_ name: String, image: String? = nil, instrument: Instrument)
 	{
-		self.init(name)
+		self.init(name, image: image)
 		
 		self.addInstrument(instrument)
 	}
@@ -77,7 +77,7 @@ public class Musician: Artist
 		return false
 	}
 	
-	private func hasInstrument() -> Bool
+	public func hasInstrument() -> Bool
 	{
 		return self.instruments != [Instrument.None] || self.instruments.count == 0
 	}

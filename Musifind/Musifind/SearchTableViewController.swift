@@ -9,7 +9,7 @@
 import UIKit
 import MusiKit
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, ImageDelegate
 {
 	var artists = [Artist]()
 	var filtered = [Artist]()
@@ -18,16 +18,27 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	{
 		super.init(coder: aDecoder)
 		
-		let newBand = Band("The Bandname")
-		newBand.addAvatar("http://userserve-ak.last.fm/serve/_/87413387/Name+The+Band+mystique.jpg")
+		let newBand = Band(
+			"The Bandname",
+			image: "http://userserve-ak.last.fm/serve/_/87413387/Name+The+Band+mystique.jpg")
+		
+		newBand.delegate = self
 		self.artists.append(newBand)
 		
-		let musician = Musician("Bas Thomas Broek", instruments: .Drums, .Guitar)
-		musician.addAvatar("https://pbs.twimg.com/profile_images/565978319137800193/5IwM8U7o.jpeg")
+		let musician = Musician(
+			"Bas Thomas Broek",
+			image: "https://pbs.twimg.com/profile_images/565978319137800193/5IwM8U7o.jpeg",
+			instruments: .Drums, .Guitar)
+		
+		musician.delegate = self
 		self.artists.append(musician)
 		
-		let anotherMusician = Musician("Toost van Bergen")
-		anotherMusician.addAvatar("https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10639714_961155063901928_5582667649241911522_n.jpg?oh=ab37efc9c9fcfc473d85d54e820aeda6&oe=55AD8954&__gda__=1438399973_6d6526d165f772876a4bcf65b57a85b7")
+		let anotherMusician = Musician(
+			"Toost van Bergen",
+			image: "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10639714_961155063901928_5582667649241911522_n.jpg?oh=ab37efc9c9fcfc473d85d54e820aeda6&oe=55AD8954&__gda__=1438399973_6d6526d165f772876a4bcf65b57a85b7",
+			instruments: .Guitar)
+		
+		anotherMusician.delegate = self
 		self.artists.append(anotherMusician)
 	}
 	
@@ -58,6 +69,12 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	// MARK: - ImageDelegate
+	func refresh(image: UIImage)
+	{
+		tableView.reloadData()
+	}
 
     // MARK: - Table view data source
 
@@ -111,6 +128,12 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 			{
 				musicianCell.cornerImage()
 				musicianCell.avatarImage.image = avatar
+			}
+			
+			if musicianCell.musician!.hasInstrument()
+			{
+				let firstInstrument = musicianCell.musician?.instruments.first
+				musicianCell.instrumentImage.image = UIImage(named: firstInstrument!.rawValue)
 			}
 			
 			return musicianCell

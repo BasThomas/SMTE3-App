@@ -29,6 +29,7 @@
 		4995E3D81AC3FDF8005886F0 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3D71AC3FDF8005886F0 /* Artist.swift */; };
 		4995E3DA1AC40DB0005886F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3D91AC40DB0005886F0 /* Extensions.swift */; };
 		4995E3DC1AC41D9C005886F0 /* MusifindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995E3DB1AC41D9C005886F0 /* MusifindViewController.swift */; };
+		4995E3DE1AC44281005886F0 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4995E3DD1AC44246005886F0 /* fontawesome-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		4995E3D71AC3FDF8005886F0 /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		4995E3D91AC40DB0005886F0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4995E3DB1AC41D9C005886F0 /* MusifindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusifindViewController.swift; sourceTree = "<group>"; };
+		4995E3DD1AC44246005886F0 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				493FB0701ABAE4B3005357C4 /* Info.plist */,
+				4995E3DD1AC44246005886F0 /* fontawesome-webfont.ttf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4995E3DE1AC44281005886F0 /* fontawesome-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ class MusicianDetailViewController: UIViewController
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var instrumentsLabel: UILabel!
 	@IBOutlet weak var avatarImage: UIImageView!
+	@IBOutlet weak var addItem: UIBarButtonItem!
 
 	override func viewDidLoad()
 	{
@@ -24,6 +25,7 @@ class MusicianDetailViewController: UIViewController
         // Do any additional setup after loading the view.
 		
 		self.navigationController?.navigationBar.tintColor = .whiteColor()
+		self.avatarImage.layer.masksToBounds = true
 		
 		if let musician = self.musician
 		{
@@ -48,6 +50,12 @@ class MusicianDetailViewController: UIViewController
 		else
 		{
 			self.navigationItem.title = "Unknown"
+		}
+		
+		if let font = UIFont(name: "FontAwesome", size: 20)
+		{
+			self.addItem.setTitleTextAttributes([NSFontAttributeName: font], forState: .Normal)
+			self.addItem.title = "\u{f067}"
 		}
     }
 

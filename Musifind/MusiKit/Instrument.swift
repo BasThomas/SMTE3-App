@@ -10,10 +10,11 @@ import UIKit
 
 public enum Instrument: String
 {
-	case Violin = "violin"
-	case Guitar = "guitar"
 	case Drums = "drums"
-	case Singing = "singing"
+	case Guitar = "guitar"
+	case Piano = "piano"
+	case Trumpet = "trumpet"
+	case Voice = "voice"
 	
 	case None = "none"
 }

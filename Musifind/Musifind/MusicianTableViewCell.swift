@@ -34,6 +34,5 @@ class MusicianTableViewCell: UITableViewCell
 	{
 		self.avatarImage.layer.cornerRadius = (self.avatarImage.frame.size.height / 2)
 		self.avatarImage.layer.masksToBounds = true
-		self.avatarImage.layer.borderWidth = 0
 	}
 }
