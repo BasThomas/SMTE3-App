@@ -9,6 +9,10 @@
     
     "WatchKit Simulator Actions": [
         {
+            "title": "Hook up",
+            "identifier": "hookUpAction"
+        },
+        {
             "title": "Send to phone",
             "identifier": "phoneSendAction"
         }
