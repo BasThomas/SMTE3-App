@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491B21761AD1195B00B1D997 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B21751AD1195B00B1D997 /* InterfaceController.swift */; };
+		491B21781AD1195B00B1D997 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B21771AD1195B00B1D997 /* NotificationController.swift */; };
+		491B217A1AD1195B00B1D997 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491B21791AD1195B00B1D997 /* GlanceController.swift */; };
+		491B217C1AD1195B00B1D997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491B217B1AD1195B00B1D997 /* Images.xcassets */; };
+		491B21801AD1195B00B1D997 /* Musifind WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 491B217F1AD1195B00B1D997 /* Musifind WatchKit App.app */; };
+		491B21881AD1195B00B1D997 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491B21861AD1195B00B1D997 /* Interface.storyboard */; };
+		491B218A1AD1195B00B1D997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491B21891AD1195B00B1D997 /* Images.xcassets */; };
+		491B218D1AD1195B00B1D997 /* Musifind WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 491B21701AD1195B00B1D997 /* Musifind WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		493FB0411ABADC64005357C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493FB0401ABADC64005357C4 /* AppDelegate.swift */; };
 		493FB0481ABADC64005357C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493FB0461ABADC64005357C4 /* Main.storyboard */; };
 		493FB04A1ABADC64005357C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493FB0491ABADC64005357C4 /* Images.xcassets */; };
@@ -33,6 +41,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		491B21811AD1195B00B1D997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 491B217E1AD1195B00B1D997;
+			remoteInfo = "Musifind WatchKit App";
+		};
+		491B218B1AD1195B00B1D997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 491B216F1AD1195B00B1D997;
+			remoteInfo = "Musifind WatchKit Extension";
+		};
 		493FB0531ABADC64005357C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 493FB0331ABADC64005357C4 /* Project object */;
@@ -64,6 +86,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		491B21941AD1195B00B1D997 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				491B218D1AD1195B00B1D997 /* Musifind WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		493FB0891ABAE4B3005357C4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +111,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		491B21701AD1195B00B1D997 /* Musifind WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Musifind WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491B21731AD1195B00B1D997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491B21741AD1195B00B1D997 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		491B21751AD1195B00B1D997 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		491B21771AD1195B00B1D997 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		491B21791AD1195B00B1D997 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		491B217B1AD1195B00B1D997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		491B217F1AD1195B00B1D997 /* Musifind WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musifind WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491B21851AD1195B00B1D997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491B21871AD1195B00B1D997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		491B21891AD1195B00B1D997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		493FB03B1ABADC64005357C4 /* Musifind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musifind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		493FB03F1ABADC64005357C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493FB0401ABADC64005357C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +153,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		491B216D1AD1195B00B1D997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		493FB0381ABADC64005357C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +193,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491B21711AD1195B00B1D997 /* Musifind WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				491B21751AD1195B00B1D997 /* InterfaceController.swift */,
+				491B21771AD1195B00B1D997 /* NotificationController.swift */,
+				491B21791AD1195B00B1D997 /* GlanceController.swift */,
+				491B217B1AD1195B00B1D997 /* Images.xcassets */,
+				491B21721AD1195B00B1D997 /* Supporting Files */,
+			);
+			path = "Musifind WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		491B21721AD1195B00B1D997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				491B21731AD1195B00B1D997 /* Info.plist */,
+				491B21741AD1195B00B1D997 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		491B21831AD1195B00B1D997 /* Musifind WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				491B21861AD1195B00B1D997 /* Interface.storyboard */,
+				491B21891AD1195B00B1D997 /* Images.xcassets */,
+				491B21841AD1195B00B1D997 /* Supporting Files */,
+			);
+			path = "Musifind WatchKit App";
+			sourceTree = "<group>";
+		};
+		491B21841AD1195B00B1D997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				491B21851AD1195B00B1D997 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		493FB0321ABADC64005357C4 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +239,8 @@
 				493FB0551ABADC64005357C4 /* MusifindTests */,
 				493FB06E1ABAE4B3005357C4 /* MusiKit */,
 				493FB07D1ABAE4B3005357C4 /* MusiKitTests */,
+				491B21711AD1195B00B1D997 /* Musifind WatchKit Extension */,
+				491B21831AD1195B00B1D997 /* Musifind WatchKit App */,
 				493FB03C1ABADC64005357C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,6 +252,8 @@
 				493FB0521ABADC64005357C4 /* MusifindTests.xctest */,
 				493FB06D1ABAE4B3005357C4 /* MusiKit.framework */,
 				493FB0771ABAE4B3005357C4 /* MusiKitTests.xctest */,
+				491B21701AD1195B00B1D997 /* Musifind WatchKit Extension.appex */,
+				491B217F1AD1195B00B1D997 /* Musifind WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,6 +372,39 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		491B216F1AD1195B00B1D997 /* Musifind WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491B21931AD1195B00B1D997 /* Build configuration list for PBXNativeTarget "Musifind WatchKit Extension" */;
+			buildPhases = (
+				491B216C1AD1195B00B1D997 /* Sources */,
+				491B216D1AD1195B00B1D997 /* Frameworks */,
+				491B216E1AD1195B00B1D997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				491B21821AD1195B00B1D997 /* PBXTargetDependency */,
+			);
+			name = "Musifind WatchKit Extension";
+			productName = "Musifind WatchKit Extension";
+			productReference = 491B21701AD1195B00B1D997 /* Musifind WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		491B217E1AD1195B00B1D997 /* Musifind WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491B21921AD1195B00B1D997 /* Build configuration list for PBXNativeTarget "Musifind WatchKit App" */;
+			buildPhases = (
+				491B217D1AD1195B00B1D997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Musifind WatchKit App";
+			productName = "Musifind WatchKit App";
+			productReference = 491B217F1AD1195B00B1D997 /* Musifind WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		493FB03A1ABADC64005357C4 /* Musifind */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 493FB05C1ABADC64005357C4 /* Build configuration list for PBXNativeTarget "Musifind" */;
@@ -286,11 +413,13 @@
 				493FB0381ABADC64005357C4 /* Frameworks */,
 				493FB0391ABADC64005357C4 /* Resources */,
 				493FB0891ABAE4B3005357C4 /* Embed Frameworks */,
+				491B21941AD1195B00B1D997 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				493FB0831ABAE4B3005357C4 /* PBXTargetDependency */,
+				491B218C1AD1195B00B1D997 /* PBXTargetDependency */,
 			);
 			name = Musifind;
 			productName = Musifind;
@@ -361,6 +490,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = Bas;
 				TargetAttributes = {
+					491B216F1AD1195B00B1D997 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					491B217E1AD1195B00B1D997 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					493FB03A1ABADC64005357C4 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -394,11 +529,31 @@
 				493FB0511ABADC64005357C4 /* MusifindTests */,
 				493FB06C1ABAE4B3005357C4 /* MusiKit */,
 				493FB0761ABAE4B3005357C4 /* MusiKitTests */,
+				491B216F1AD1195B00B1D997 /* Musifind WatchKit Extension */,
+				491B217E1AD1195B00B1D997 /* Musifind WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		491B216E1AD1195B00B1D997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491B217C1AD1195B00B1D997 /* Images.xcassets in Resources */,
+				491B21801AD1195B00B1D997 /* Musifind WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491B217D1AD1195B00B1D997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491B21881AD1195B00B1D997 /* Interface.storyboard in Resources */,
+				491B218A1AD1195B00B1D997 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		493FB0391ABADC64005357C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,6 +589,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		491B216C1AD1195B00B1D997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491B21781AD1195B00B1D997 /* NotificationController.swift in Sources */,
+				491B21761AD1195B00B1D997 /* InterfaceController.swift in Sources */,
+				491B217A1AD1195B00B1D997 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		493FB0371ABADC64005357C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +645,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		491B21821AD1195B00B1D997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 491B217E1AD1195B00B1D997 /* Musifind WatchKit App */;
+			targetProxy = 491B21811AD1195B00B1D997 /* PBXContainerItemProxy */;
+		};
+		491B218C1AD1195B00B1D997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 491B216F1AD1195B00B1D997 /* Musifind WatchKit Extension */;
+			targetProxy = 491B218B1AD1195B00B1D997 /* PBXContainerItemProxy */;
+		};
 		493FB0541ABADC64005357C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 493FB03A1ABADC64005357C4 /* Musifind */;
@@ -503,6 +678,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		491B21861AD1195B00B1D997 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491B21871AD1195B00B1D997 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		493FB0461ABADC64005357C4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -522,6 +705,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		491B218E1AD1195B00B1D997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Musifind WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		491B218F1AD1195B00B1D997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Musifind WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		491B21901AD1195B00B1D997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Musifind_WatchKit_Extension;
+				INFOPLIST_FILE = "Musifind WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		491B21911AD1195B00B1D997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = Musifind_WatchKit_Extension;
+				INFOPLIST_FILE = "Musifind WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		493FB05A1ABADC64005357C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -733,6 +982,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		491B21921AD1195B00B1D997 /* Build configuration list for PBXNativeTarget "Musifind WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491B21901AD1195B00B1D997 /* Debug */,
+				491B21911AD1195B00B1D997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		491B21931AD1195B00B1D997 /* Build configuration list for PBXNativeTarget "Musifind WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491B218E1AD1195B00B1D997 /* Debug */,
+				491B218F1AD1195B00B1D997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		493FB0361ABADC64005357C4 /* Build configuration list for PBXProject "Musifind" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
