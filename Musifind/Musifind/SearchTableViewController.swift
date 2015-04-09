@@ -136,7 +136,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		
 		if let musician = currentMusician
 		{
-			musicianCell = self.tableView.dequeueReusableCellWithIdentifier("newMusician", forIndexPath: indexPath) as MusicianTableViewCell
+			musicianCell = self.tableView.dequeueReusableCellWithIdentifier("newMusician", forIndexPath: indexPath) as! MusicianTableViewCell
 			
 			musicianCell.musician = musician
 			
@@ -158,7 +158,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		}
 		else if let band = currentBand
 		{
-			bandCell = self.tableView.dequeueReusableCellWithIdentifier("newBand", forIndexPath: indexPath) as BandTableViewCell
+			bandCell = self.tableView.dequeueReusableCellWithIdentifier("newBand", forIndexPath: indexPath) as! BandTableViewCell
 			
 			bandCell.band = band
 			
@@ -227,7 +227,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	
 	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool
 	{
-		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
 		let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
 		
 		self.filterContent(searchText: searchString, scope: selectedScope)
@@ -237,7 +237,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	
 	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool
 	{
-		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
 		
 		self.filterContent(searchText: self.searchDisplayController!.searchBar.text, scope: scopes[searchOption])
 		
@@ -288,17 +288,17 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	{
 		if segue.identifier == "musicianDetail"
 		{
-			let dvc = segue.destinationViewController as MusicianDetailViewController
+			let dvc = segue.destinationViewController as! MusicianDetailViewController
 			
-			let cell = sender as MusicianTableViewCell
+			let cell = sender as! MusicianTableViewCell
 			
 			dvc.musician = cell.musician
 		}
 		else if segue.identifier == "bandDetail"
 		{
-			let dvc = segue.destinationViewController as BandDetailViewController
+			let dvc = segue.destinationViewController as! BandDetailViewController
 			
-			let cell = sender as BandTableViewCell
+			let cell = sender as! BandTableViewCell
 			
 			dvc.band = cell.band
 		}
