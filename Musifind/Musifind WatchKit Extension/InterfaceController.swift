@@ -60,7 +60,7 @@ class InterfaceController: WKInterfaceController, ImageDelegate
         yetAnotherMusician.delegate = self
         self.artists.append(yetAnotherMusician)
         
-        self.loadTableData()
+        //self.loadTableData()
     }
 
     override func willActivate()
@@ -78,21 +78,22 @@ class InterfaceController: WKInterfaceController, ImageDelegate
     // MARK: - Image Delegate
     func refresh(image: UIImage)
     {
-        // reload data
+		println("refresh")
+		self.loadTableData()
     }
     
     // MARK: - Methods
     private func loadTableData()
     {
-        println("loadTableData()")
         self.artistTable.setNumberOfRows(self.artists.count, withRowType: "musician")
-        println(self.artists.count)
         
         for (index, artist) in enumerate(self.artists)
         {
             let row = self.artistTable.rowControllerAtIndex(index) as! TableViewController
+			
+			let scaledImage = artist.avatar?.scaleImage(toHeight: 70.0)
             
-            row.avatar.setImage(artist.avatar)
+			row.avatar.setImage(scaledImage ?? UIImage(named: "user"))
             row.nameLabel.setText(artist.name)
         }
     }

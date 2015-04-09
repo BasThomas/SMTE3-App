@@ -81,3 +81,75 @@ extension UIColor
 		return UIColor(red: 0.788, green: 0.788, blue: 0.808, alpha: 1)
 	}
 }
+
+/// UIImage extensions
+extension UIImage
+{
+	public func scaleImage(toWidth width: Float) -> UIImage?
+	{
+		if self.size.width > width
+		{
+			let cgImage = self.CGImage
+			let scale = CGFloat(width / self.size.width)
+			
+			return UIImage(CGImage: cgImage, scale: scale, orientation: .Up)
+		}
+		
+		return nil
+	}
+	
+	public func scaleImage(toHeight height: Float) -> UIImage?
+	{
+		if self.size.height > height
+		{
+			let cgImage = self.CGImage
+			let scale = CGFloat(height / self.size.height)
+			
+			return UIImage(CGImage: cgImage, scale: scale, orientation: .Up)
+		}
+		
+		return nil
+	}
+}
+
+/// Float extensions
+extension Float: Equatable, Comparable
+{
+	
+}
+
+public func >(lhs: Float, rhs: CGFloat) -> Bool
+{
+	return lhs > Float(rhs)
+}
+
+public func <(lhs: Float, rhs: CGFloat) -> Bool
+{
+	return lhs < Float(rhs)
+}
+
+public func /(lhs: Float, rhs: CGFloat) -> Float
+{
+	return lhs / Float(rhs)
+}
+
+/// CGFloat extensions
+extension CGFloat: Equatable, Comparable
+{
+	
+}
+
+public func >(lhs: CGFloat, rhs: Float) -> Bool
+{
+	return Float(lhs) > rhs
+}
+
+public func <(lhs: CGFloat, rhs: Float) -> Bool
+{
+	return Float(lhs) < rhs
+}
+
+public func /(lhs: CGFloat, rhs: Float) -> Float
+{
+	return Float(lhs) / rhs
+}
