@@ -90,7 +90,7 @@ class InterfaceController: WKInterfaceController, ImageDelegate
         
         for (index, artist) in enumerate(self.artists)
         {
-            let row = self.artistTable.rowControllerAtIndex(index) as TableViewController
+            let row = self.artistTable.rowControllerAtIndex(index) as! TableViewController
             
             row.avatar.setImage(artist.avatar)
             row.nameLabel.setText(artist.name)
