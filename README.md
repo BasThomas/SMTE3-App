@@ -29,4 +29,4 @@ Feedback van John: gebruikersonderzoek kan goed helpen om details voor de app te
 Zelf: Documentatie duidelijk gaan opstellen. Nu is het wat onoverzichtelijk. We hebben daar later ook zelf veel aan wanneer het goed gedocumenteerd is.
 
 ## Week 9
-De ᴡᴀᴛᴄʜ Heeft er niet altijd evenveel zin in. Net als Xcode overigens. In de documentatie zijn daarom screenshots toegevoegd om de werking te demonstreren, maar laten we gewoon hopen dat 't werkt.
+De ᴡᴀᴛᴄʜ Heeft er niet altijd evenveel zin in. Net als Xcode overigens. In de documentatie zijn daarom screenshots toegevoegd om de werking te demonstreren, maar laten we gewoon hopen dat 't werkt (onder 't mom van 'it just works').
