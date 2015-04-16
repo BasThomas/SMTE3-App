@@ -8,6 +8,7 @@
 
 import WatchKit
 
+/// The TableViewController-class capturing and setting all outlets.
 class TableViewController: NSObject
 {
     @IBOutlet weak var avatar: WKInterfaceImage!

@@ -14,14 +14,13 @@ class MusifindViewController: UITabBarController
     override func viewDidLoad()
 	{
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		
+		// FIXME: **BUG** Set the tintColor of the tabBar to musifindColor, as it can't be done in the storyboard. ¯\_(ツ)_/¯
 		UITabBar.appearance().tintColor = .musifindColor()
     }
 
     override func didReceiveMemoryWarning()
 	{
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// ImageDelegate protocol for reloading if images have been pulled from the internet.
 public protocol ImageDelegate
 {
 	func refresh(image: UIImage)
@@ -15,7 +16,10 @@ public protocol ImageDelegate
 
 public class Artist
 {
+	/// Name of the artist
 	public var name: String
+	
+	/// Image of the artist
 	public var avatar: UIImage?
 	{
 		didSet
@@ -23,6 +27,8 @@ public class Artist
 			self.delegate?.refresh(self.avatar!)
 		}
 	}
+	
+	/// Delegate listening to image-updates.
 	public var delegate: ImageDelegate?
 	
 	public init(name: String, image: String? = nil)
@@ -35,6 +41,11 @@ public class Artist
 		}
 	}
 	
+	/**
+		Adds an avatar to the artist
+		
+		:param: avatar String of the avatar-URL.
+	*/
 	public func addAvatar(avatar: String)
 	{
 		if let checkedURL = NSURL(string: avatar)

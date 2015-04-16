@@ -10,6 +10,7 @@ import UIKit
 
 public class Band: Artist
 {
+	/// The musicians of a band, if any.
 	public var musicians = [Musician]()
 	
 	public init(_ name: String, image: String? = nil)
@@ -17,6 +18,11 @@ public class Band: Artist
 		super.init(name: name, image: image)
 	}
 	
+	/**
+		Adds a musician to the band.
+	
+		:param: musician The musician to add.
+	*/
 	public func addMusician(musician: Musician)
 	{
 		self.musicians.append(musician)

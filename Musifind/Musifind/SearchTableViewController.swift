@@ -11,7 +11,10 @@ import MusiKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, ImageDelegate
 {
+	/// Array of all artists
 	var artists = [Artist]()
+	
+	/// Array of all filtered artists for search.
 	var filtered = [Artist]()
 	
 	required init(coder aDecoder: NSCoder)
@@ -79,7 +82,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	{
 		super.viewWillAppear(animated)
 		
-		tableView.reloadData()
+		self.refresh()
 	}
 
     override func didReceiveMemoryWarning()
@@ -89,16 +92,19 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     }
 	
 	// MARK: - ImageDelegate
+	/**
+		Refreshes the tableview to set the just-received image.
+		
+		:param: image The image to set.
+	*/
 	func refresh(image: UIImage)
 	{
-		tableView.reloadData()
+		self.refresh()
 	}
 
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int
 	{
-        // Return the number of sections.
         return 1
     }
 
@@ -175,48 +181,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		
 		return UITableViewCell()
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
-	{
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
-	{
-        if editingStyle == .Delete
-		{
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        }
-		else if editingStyle == .Insert
-		{
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath)
-	{
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool
-	{
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
 	{
@@ -224,7 +188,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	}
 	
 	// MARK: - Searchbar data source
-	
 	func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool
 	{
 		let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
@@ -276,14 +239,23 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 	
 	// MARK: - Refresh
 	
+	/**
+		Refreshes the view, ending the refreshControl if active.
+	*/
 	func refresh()
 	{
-		tableView.reloadData()
+		self.tableView.reloadData()
 		self.refreshControl?.endRefreshing()
 	}
 
     // MARK: - Navigation
-
+	
+	/**
+		Prepares the app to handle a segue.
+	
+		:param: segue The segue to prepare for.
+		:param: sender The object that called for the preparation.
+	*/
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
 	{
 		if segue.identifier == "musicianDetail"

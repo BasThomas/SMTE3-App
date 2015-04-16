@@ -11,6 +11,7 @@ import MusiKit
 
 class MusicianTableViewCell: UITableViewCell
 {
+	/// The musician associated with the cell, if any.
 	var musician: Musician?
 	
 	@IBOutlet weak var avatarImage: UIImageView!
@@ -20,16 +21,16 @@ class MusicianTableViewCell: UITableViewCell
     override func awakeFromNib()
 	{
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool)
 	{
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 	
+	/**
+		Makes the image in the cell a circle, adds orange border.
+	*/
 	func cornerImage()
 	{
 		self.avatarImage.layer.cornerRadius = (self.avatarImage.frame.size.height / 2)

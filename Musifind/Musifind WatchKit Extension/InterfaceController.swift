@@ -74,12 +74,21 @@ class InterfaceController: WKInterfaceController, ImageDelegate
     }
     
     // MARK: - Image Delegate
+	
+	/**
+		Protocol method for reloading if images have been pulled from the internet.
+	*/
     func refresh(image: UIImage)
     {
+		// FIXME: Only refresh one row at a time.
 		self.loadTableData()
     }
     
     // MARK: - Methods
+	
+	/**
+		Loads the table data to the tableView.
+	*/
     private func loadTableData()
     {
         self.artistTable.setNumberOfRows(self.artists.count, withRowType: "musician")

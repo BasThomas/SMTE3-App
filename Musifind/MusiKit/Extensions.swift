@@ -85,6 +85,13 @@ extension UIColor
 /// UIImage extensions
 extension UIImage
 {
+	/**
+		Scales an image to the provided width.
+	
+		:param: toWidth The width to scale to
+	
+		:returns: UIImage containing the new image, or nil if the image was that size (or smaller).
+	*/
 	public func scaleImage(toWidth width: Float) -> UIImage?
 	{
 		if self.size.width > width
@@ -98,6 +105,13 @@ extension UIImage
 		return nil
 	}
 	
+	/**
+		Scales an image to the provided height.
+		
+		:param: toHeight The height to scale to
+		
+		:returns: UIImage containing the new image, or nil if the image was that size (or smaller).
+	*/
 	public func scaleImage(toHeight height: Float) -> UIImage?
 	{
 		if self.size.height > height
