@@ -31,7 +31,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
 		musician.delegate = self
 		self.artists.append(musician)
 		
-		let anotherMusician = Musician("Toost van Bergen",
+		let anotherMusician = Musician("Joost van Bergen",
 			image: "https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10639714_961155063901928_5582667649241911522_n.jpg?oh=ab37efc9c9fcfc473d85d54e820aeda6&oe=55AD8954&__gda__=1438399973_6d6526d165f772876a4bcf65b57a85b7",
 			instruments: .Guitar)
 		
