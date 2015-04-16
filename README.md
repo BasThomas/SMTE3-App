@@ -27,3 +27,6 @@ Doel: Wat is het doel van de app? Muzikanten met elkaar in contact laten komen o
 Feedback van John: gebruikersonderzoek kan goed helpen om details voor de app te bepalen.
 
 Zelf: Documentatie duidelijk gaan opstellen. Nu is het wat onoverzichtelijk. We hebben daar later ook zelf veel aan wanneer het goed gedocumenteerd is.
+
+## Week 9
+De ᴡᴀᴛᴄʜ Heeft er niet altijd evenveel zin in. Net als Xcode overigens. In de documentatie zijn daarom screenshots toegevoegd om de werking te demonstreren, maar laten we gewoon hopen dat 't werkt.
