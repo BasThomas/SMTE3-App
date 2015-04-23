@@ -8,6 +8,7 @@
 
 import UIKit
 import MusiKit
+import CoreMotion
 
 class MusicianDetailViewController: UIViewController
 {
@@ -58,6 +59,8 @@ class MusicianDetailViewController: UIViewController
 			self.addItem.setTitleTextAttributes([NSFontAttributeName: font], forState: .Normal)
 			self.addItem.title = "\u{f067}"
 		}
+		
+		self.setupCoreMotion()
     }
 
     override func didReceiveMemoryWarning()
@@ -65,4 +68,25 @@ class MusicianDetailViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+	
+	func setupCoreMotion()
+	{
+		let manager = CMMotionManager()
+		
+		if manager.deviceMotionAvailable
+		{
+			manager.deviceMotionUpdateInterval = 0.02
+			manager.startDeviceMotionUpdates()
+			
+			manager.startDeviceMotionUpdatesToQueue(.mainQueue()) {
+				(data: CMDeviceMotion!, error: NSError!) in
+				
+				if data.userAcceleration.x < -2.5
+				{
+					manager.stopDeviceMotionUpdates()
+					self.navigationController?.popViewControllerAnimated(true)
+				}
+			}
+		}
+	}
 }

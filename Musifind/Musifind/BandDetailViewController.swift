@@ -8,6 +8,7 @@
 
 import UIKit
 import MusiKit
+import CoreMotion
 
 class BandDetailViewController: UIViewController
 {
@@ -45,10 +46,33 @@ class BandDetailViewController: UIViewController
 			self.addItem.setTitleTextAttributes([NSFontAttributeName: font], forState: .Normal)
 			self.addItem.title = "\u{f067}"
 		}
+		
+		self.setupCoreMotion()
     }
 
     override func didReceiveMemoryWarning()
 	{
         super.didReceiveMemoryWarning()
     }
+	
+	func setupCoreMotion()
+	{
+		let manager = CMMotionManager()
+		
+		if manager.deviceMotionAvailable
+		{
+			manager.deviceMotionUpdateInterval = 0.02
+			manager.startDeviceMotionUpdates()
+			
+			manager.startDeviceMotionUpdatesToQueue(.mainQueue()) {
+				(data: CMDeviceMotion!, error: NSError!) in
+				
+				if data.userAcceleration.x < -2.5
+				{
+					manager.stopDeviceMotionUpdates()
+					self.navigationController?.popViewControllerAnimated(true)
+				}
+			}
+		}
+	}
 }

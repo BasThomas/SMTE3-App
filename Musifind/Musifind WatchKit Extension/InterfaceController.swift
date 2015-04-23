@@ -12,7 +12,8 @@ import MusiKit
 class InterfaceController: WKInterfaceController, ImageDelegate
 {
     @IBOutlet weak var artistTable: WKInterfaceTable!
-    
+	
+	/// Array of artists in the tableView, if any.
     var artists = [Artist]()
     
     override func awakeWithContext(context: AnyObject?)
@@ -63,13 +64,11 @@ class InterfaceController: WKInterfaceController, ImageDelegate
 
     override func willActivate()
     {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
 
     override func didDeactivate()
     {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     

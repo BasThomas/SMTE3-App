@@ -18,7 +18,9 @@
                                             <imageView width="0.30000000000000016" alignment="left" contentMode="scaleAspectFill" id="gY8-dl-CeJ"/>
                                             <group width="0.70000000000000007" alignment="left" id="xoV-ex-maY">
                                                 <items>
-                                                    <label alignment="left" text="name" numberOfLines="0" id="oWP-B2-AtN"/>
+                                                    <label alignment="left" text="name" numberOfLines="0" id="oWP-B2-AtN">
+                                                        <color key="textColor" red="1" green="0.3921568627" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </label>
                                                 </items>
                                             </group>
                                         </items>

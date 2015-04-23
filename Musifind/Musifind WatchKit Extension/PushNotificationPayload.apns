@@ -1,7 +1,7 @@
 {
     "aps": {
         "alert": {
-            "body": "*name* is looking for a band!",
+            "body": "Joost is looking for a band!",
             "title": "Optional title"
         },
         "category": "myCategory"
