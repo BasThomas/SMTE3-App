@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -18,9 +18,7 @@
                                             <imageView width="0.30000000000000016" alignment="left" contentMode="scaleAspectFill" id="gY8-dl-CeJ"/>
                                             <group width="0.70000000000000007" alignment="left" id="xoV-ex-maY">
                                                 <items>
-                                                    <label alignment="left" text="name" numberOfLines="0" id="oWP-B2-AtN">
-                                                        <color key="textColor" red="1" green="0.3921568627" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </label>
+                                                    <label alignment="left" text="name" numberOfLines="0" id="oWP-B2-AtN"/>
                                                 </items>
                                             </group>
                                         </items>
@@ -81,4 +79,5 @@
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.3921568627" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
